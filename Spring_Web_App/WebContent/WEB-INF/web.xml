@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Spring_Web_App</display-name>
+  <welcome-file-list>
+    <welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet> <!-- dispatcher se encarga de enviar peticion -->
+  	<servlet-name>spring</servlet-name>  
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	
+  	<init-param> <!-- inicializa el dispatcher -->
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/config/spring-servlet.xml</param-value>
+  	</init-param>
+
+	<load-on-startup>1</load-on-startup> <!-- indica el orden en que se van a cargar el servlet -->
+  </servlet>
+  
+  <servlet-mapping> <!-- mappea el servlet de arriba con peticiones de cualquier url (/) -->
+  	<servlet-name>spring</servlet-name>
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  
+
+</web-app>
