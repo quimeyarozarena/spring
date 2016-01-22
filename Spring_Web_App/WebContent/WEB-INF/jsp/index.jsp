@@ -10,11 +10,12 @@
 <link href='<c:url value="/css/style.css"></c:url>' rel="stylesheet">
 <script type="text/javascript" scr='<c:url value="/js/demo.js"></c:url>'></script>
 </head>
-<body>
-<a class="demo" href="${pageContext.request.contextPath}/login">" ></script>
 </head>
 <body>
+
 <a class="demo" href="${pageContext.request.contextPath}/login">Login</a>
+
+<a class="demo" href="${pageContext.request.contextPath}/signup">Sign Up</a>
 
 <img alt="demo" src='<c:url value="/img/spring.png"></c:url>'> <!-- alt -> alternative text -->
 
